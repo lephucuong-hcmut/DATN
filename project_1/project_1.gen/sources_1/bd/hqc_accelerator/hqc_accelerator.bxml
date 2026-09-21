@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="40">
+  <CompositeFile CompositeFileTopName="hqc_accelerator" CanBeSetAsTop="true" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1778073774"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1778073774"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1778073762"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1778073762"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
+  </CompositeFile>
+</Root>

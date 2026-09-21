@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed May  6 19:23:32 2026
+# Process ID: 16984
+# Current directory: C:/Users/THUAN/Downloads/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3056 C:\Users\THUAN\Downloads\project_1\project_1.xpr
+# Log file: C:/Users/THUAN/Downloads/project_1/vivado.log
+# Journal file: C:/Users/THUAN/Downloads/project_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 10, Host memory: 8276 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/THUAN/Downloads/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source keygen_tb.tcl
+close_sim
+launch_simulation
+source keygen_tb.tcl
+run all
+close_sim
+ipx::package_project -root_dir C:/Users/THUAN/Downloads/project_1 -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core c:/Users/THUAN/Downloads/project_1/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory C:/Users/THUAN/Downloads/project_1 c:/Users/THUAN/Downloads/project_1/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  c:/Users/THUAN/Downloads/project_1 [current_project]
+update_ip_catalog
+create_bd_design "hqc_accelerator"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.4 zynq_ultra_ps_e_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:axi_wrapper:1.0 axi_wrapper_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_wrapper_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_wrapper_0/s00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/axi_wrapper_0/s00_axi} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+open_bd_design {C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd}
+save_bd_design
+ipx::open_ipxact_file c:/Users/THUAN/Downloads/project_1/component.xml
+set_property display_name hqc_axi_wrapper [ipx::current_core]
+set_property description hqc_axi_wrapper [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/Users/THUAN/Downloads/project_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:axi_wrapper:1.0 [get_ips  hqc_accelerator_axi_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips hqc_accelerator_axi_wrapper_0_0] -no_script -sync -force -quiet
+set_property synth_checkpoint_mode None [get_files  C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd]
+generate_target all [get_files  C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd]
+export_ip_user_files -of_objects [get_files C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd] -directory C:/Users/THUAN/Downloads/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/THUAN/Downloads/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/THUAN/Downloads/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/THUAN/Downloads/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/THUAN/Downloads/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/THUAN/Downloads/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/THUAN/Downloads/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+close_bd_design [get_bd_designs hqc_accelerator]
+open_bd_design {C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd}
+set_property location {1 143 -199} [get_bd_cells axi_wrapper_0]
+ipx::merge_project_changes files [ipx::current_core]
+set_property name hqc_axi_wrapper [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/Users/THUAN/Downloads/project_1
+close_bd_design [get_bd_designs hqc_accelerator]
+open_bd_design {C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd}
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/Users/THUAN/Downloads/project_1
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/Users/THUAN/Downloads/project_1
+open_bd_design {C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd}
+regenerate_bd_layout
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets ps8_0_axi_periph_M00_AXI] [get_bd_cells axi_wrapper_0]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM0_FPD] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM1_FPD] [get_bd_nets zynq_ultra_ps_e_0_pl_resetn0] [get_bd_cells zynq_ultra_ps_e_0]
+delete_bd_objs [get_bd_cells rst_ps8_0_99M]
+delete_bd_objs [get_bd_nets rst_ps8_0_99M_peripheral_aresetn] [get_bd_nets zynq_ultra_ps_e_0_pl_clk0] [get_bd_cells ps8_0_axi_periph]
+save_bd_design
+close_bd_design [get_bd_designs hqc_accelerator]
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/THUAN/Downloads/project_1
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory C:/Users/THUAN/Downloads/project_1/project_1.tmp c:/Users/THUAN/Downloads/project_1/component.xml
+ipx::current_core c:/Users/THUAN/Downloads/project_1/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property name hqc_axi_wrapper [ipx::current_core]
+set_property display_name hqc_axi_wrapper [ipx::current_core]
+set_property description hqc_axi_wrapper [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property previous_version_for_upgrade xilinx.com:user:axi_wrapper:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/THUAN/Downloads/project_1
+open_bd_design {C:/Users/THUAN/Downloads/project_1/project_1.srcs/sources_1/bd/hqc_accelerator/hqc_accelerator.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.4 zynq_ultra_ps_e_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:hqc_axi_wrapper:1.0 hqc_axi_wrapper_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/hqc_axi_wrapper_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins hqc_axi_wrapper_0/s00_axi]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/hqc_axi_wrapper_0/s00_axi} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+save_bd_design
+close_bd_design [get_bd_designs hqc_accelerator]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:hqc_axi_wrapper:1.0 [get_ips  hqc_accelerator_hqc_axi_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips hqc_accelerator_hqc_axi_wrapper_0_0] -no_script -sync -force -quiet
+close_bd_design [get_bd_designs hqc_accelerator]
+ipx::unload_core c:/Users/THUAN/Downloads/project_1/component.xml
+report_ip_status -name ip_status 
+set_property top encap_tb_fd [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+set_property top keygen_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source keygen_tb.tcl
+update_compile_order -fileset sim_1
+run all
+close_sim
+set_property top encap_tb_fd [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source encap_tb_fd.tcl
+run all
+close_sim
+launch_simulation
+source encap_tb_fd.tcl
+run all
+close_sim

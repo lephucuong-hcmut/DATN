@@ -1,0 +1,23 @@
+Time resolution is 1 ps
+=== KHOI DONG HE THONG DECAP TESTBENCH V3.0 ===
+--- [TB] Dang nap RAM ID 0 ---
+--- [TB] Dang nap RAM ID 1 ---
+--- [TB] Dang nap RAM ID 2 ---
+--- [TB] Dang nap RAM ID 3 ---
+--- [TB] Dang nap Secret Key Y (RAM ID 4)... ---
+--- [TB] Dang nap D Data (RAM ID 5)... ---
+--- [DEBUG] Kiem tra RAM U[0] ---
+RAM U[0] thuc te: 418a86b721a7b8393d2bb02a059636c2
+--- [TB] Bat dau Decap (Op=2) ---
+--- [TB] Dang cho tin hieu DONE... ---
+--- [TB] DECAP DONE! ---
+--- [TB] EXACT CYCLES: 45753 ---
+--- [TB] Saving SS ---
+
+SS_Decap[0-3]: ce791427 d2933003 be8d3d51 a24523c6 
+SS_Decap[4-7]: 874bea72 1a46c9cc 3677411c a40da2ff 
+SS_Decap[8-11]: 41d01056 4b19162d 9158ff21 bd55a9ef 
+SS_Decap[12-15]: 8b68aaa0 79860d5e 9dc32f1e 731016f7 
+
+=== FINISHED ===
+$finish called at time : 495250 ns : File "C:/Users/THUAN/Downloads/new/decap_tb.v" Line 191

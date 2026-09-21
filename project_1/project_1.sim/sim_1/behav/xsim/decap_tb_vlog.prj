@@ -1,0 +1,66 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../new/HQC_wrapper.v" \
+"../../../../../new/add_fft.v" \
+"../../../../../new/barrett_red_gen.v" \
+"../../../../../new/cdw_xor_tmp.v" \
+"../../../../../new/concat_code.v" \
+"../../../../../new/control_path.v" \
+"../../../../../new/data_path.v" \
+"../../../../../new/decap.v" \
+"../../../../../new/decrypt.v" \
+"../../../../../new/encap.v" \
+"../../../../../new/encrypt.v" \
+"../../../../../new/encrypt_parallel.v" \
+"../../../../../new/fft_leaves_butterfly.v" \
+"../../../../../new/fft_part1.v" \
+"../../../../../new/fft_part2.v" \
+"../../../../../new/fft_retrieve_error_poly.v" \
+"../../../../../new/fixed_weight.v" \
+"../../../../../new/fixed_weight_ct.v" \
+"../../../../../new/fixed_weight_cww.v" \
+"../../../../../new/gf_mul.v" \
+"../../../../../new/gfmul_00.v" \
+"../../../../../new/gfmul_01.v" \
+"../../../../../new/hqc_barrett_red.v" \
+"../../../../../new/hqc_decod_top.v" \
+"../../../../../new/hqc_kem_joint_design.v" \
+"../../../../../new/hqc_rmdecod_ctrl.v" \
+"../../../../../new/hqc_rmdecod_expnsum.v" \
+"../../../../../new/hqc_rmdecod_findpeaks.v" \
+"../../../../../new/hqc_rmdecod_hadamard.v" \
+"../../../../../new/hqc_rmdecod_top.v" \
+"../../../../../new/hqc_rsdecod_elp.v" \
+"../../../../../new/hqc_rsdecod_err_val.v" \
+"../../../../../new/hqc_rsdecod_roots.v" \
+"../../../../../new/hqc_rsdecod_syndromes.v" \
+"../../../../../new/hqc_rsdecod_top.v" \
+"../../../../../new/hqc_rsdecod_zpoly.v" \
+"../../../../../new/karatsuba_small.v" \
+"../../../../../new/keccak_top.v" \
+"../../../../../new/keygen.v" \
+"../../../../../new/loc_based_adder.v" \
+"../../../../../new/mem_dual.v" \
+"../../../../../new/mem_single.v" \
+"../../../../../new/mod34.v" \
+"../../../../../new/onegen.v" \
+"../../../../../new/onegen_ct.v" \
+"../../../../../new/poly_mult.v" \
+"../../../../../new/rc.v" \
+"../../../../../new/reed_muller_encode.v" \
+"../../../../../new/reed_solomon_encode.v" \
+"../../../../../new/rm_encoder.v" \
+"../../../../../new/state_ram.v" \
+"../../../../../new/stateram_inference.v" \
+"../../../../../new/syncfifo.v" \
+"../../../../../new/transform.v" \
+"../../../../../new/v_minus_uy.v" \
+"../../../../../new/vect_set_random.v" \
+"../../../../../new/xor_based_adder.v" \
+"../../../../../new/decap_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
