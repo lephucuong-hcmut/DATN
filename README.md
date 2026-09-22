@@ -8,6 +8,7 @@ This project is a Capstone Project focused on the hardware implementation and ac
 The main objective is to implement the major cryptographic operations of HQC in hardware and investigate the performance benefits of FPGA-based acceleration compared with a microcontroller-based implementation.
 
 The project implements the complete HQC cryptographic flow, including:
+<img width="1576" height="730" alt="Image" src="https://github.com/user-attachments/assets/8b94cab7-4e50-4241-9781-03a146538ee1" />
 
 - Key Generation
 - Encapsulation
