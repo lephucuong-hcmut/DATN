@@ -3,6 +3,7 @@
 ## Overview
 
 This project is a Capstone Project focused on the hardware implementation and acceleration of the **Hamming Quasi-Cyclic (HQC)** post-quantum key encapsulation mechanism (KEM) using **Verilog HDL** and FPGA technology.
+<img width="1159" height="592" alt="Image" src="https://github.com/user-attachments/assets/6e244624-2673-4157-9b20-1270e138490a" />
 
 The main objective is to implement the major cryptographic operations of HQC in hardware and investigate the performance benefits of FPGA-based acceleration compared with a microcontroller-based implementation.
 
