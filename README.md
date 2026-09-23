@@ -28,9 +28,11 @@ Decap Block Design
 Polynomial multiplacation Block Design
 <img width="1084" height="468" alt="Image" src="https://github.com/user-attachments/assets/d4441c6b-1177-4ba2-8431-46cad5c6316b" />
 
+
 Keccak 1600 bit refer from Keccak TEAM
 <img width="544" height="481" alt="Image" src="https://github.com/user-attachments/assets/4f009c1a-cf50-49e7-83a2-4c8e900ea4fa" />
 
-It is also have many sub modules to help the design.
+It is also have many sub modules to help the design.  See at DATN/project_1
+/src/
 
 The FPGA implementation achieves **up to 200× speedup** compared with the IoT Nucleo implementation under the evaluated conditions.
