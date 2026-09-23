@@ -16,20 +16,20 @@ The project implements the complete HQC cryptographic flow, including:
 - Polynomial multiplication
 - Keccak / SHAKE-based hashing
 
-KeyGen Block Design
+KeyGen Block Design: This module uses the random seed to create Public Key and Secret Key
 <img width="864" height="773" alt="Image" src="https://github.com/user-attachments/assets/9d3091b0-ffa8-4cb3-aa89-c95c32b62d06" />
 
-Encap Block Design
+Encap Block Design: This module uses the Public Key to create Ciphertext and K secret
 <img width="976" height="606" alt="Image" src="https://github.com/user-attachments/assets/49686108-4d10-4a11-88ee-7d9fdc9e6bc1" />
 
-Decap Block Design
+Decap Block Design: This module uses the Private Key and the Ciphertext to decrypt message and K secret. It also re-encrypt to check the correctness of the decyption.
 <img width="1079" height="780" alt="Image" src="https://github.com/user-attachments/assets/25bb238f-2069-4aae-b8cd-6ca59d5e3433" />
 
-Polynomial multiplacation Block Design
+Polynomial multiplacation Block Design: This module is used to calculate the multiplation of two polynomials by Sparse Polynomial Multiplication. 
 <img width="1084" height="468" alt="Image" src="https://github.com/user-attachments/assets/d4441c6b-1177-4ba2-8431-46cad5c6316b" />
 
 
-Keccak 1600 bit refer from Keccak TEAM
+Keccak 1600 bit refer from Keccak TEAM. This module is used to create random vecto
 <img width="544" height="481" alt="Image" src="https://github.com/user-attachments/assets/4f009c1a-cf50-49e7-83a2-4c8e900ea4fa" />
 
 It is also have many sub modules to help the design.  See at DATN/project_1
