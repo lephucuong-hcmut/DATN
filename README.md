@@ -18,13 +18,19 @@ The project implements the complete HQC cryptographic flow, including:
 
 KeyGen Block Design
 <img width="864" height="773" alt="Image" src="https://github.com/user-attachments/assets/9d3091b0-ffa8-4cb3-aa89-c95c32b62d06" />
+
 Encap Block Design
 <img width="976" height="606" alt="Image" src="https://github.com/user-attachments/assets/49686108-4d10-4a11-88ee-7d9fdc9e6bc1" />
+
 Decap Block Design
 <img width="1079" height="780" alt="Image" src="https://github.com/user-attachments/assets/25bb238f-2069-4aae-b8cd-6ca59d5e3433" />
+
 Polynomial multiplacation Block Design
 <img width="1084" height="468" alt="Image" src="https://github.com/user-attachments/assets/d4441c6b-1177-4ba2-8431-46cad5c6316b" />
+
 Keccak 1600 bit refer from Keccak TEAM
 <img width="544" height="481" alt="Image" src="https://github.com/user-attachments/assets/4f009c1a-cf50-49e7-83a2-4c8e900ea4fa" />
+
+It is also have many sub modules to help the design.
 
 The FPGA implementation achieves **up to 200× speedup** compared with the IoT Nucleo implementation under the evaluated conditions.
