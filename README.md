@@ -1,4 +1,4 @@
-# FPGA-Based HQC Post-Quantum Cryptographic Accelerator
+# Hardware acceleration for the Hamming Quasi-Cyclic algorithm - an alternative post-quantum asymmetric cryptography scheme
 
 ## Overview
 
